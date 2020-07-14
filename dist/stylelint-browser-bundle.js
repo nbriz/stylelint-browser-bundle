@@ -9049,7 +9049,7 @@ module.exports =
 /* 44 */
 /***/ function(module, exports) {
 
-	
+
 
 /***/ },
 /* 45 */
@@ -145950,7 +145950,7 @@ module.exports =
 	    var stringLength = opts.stringLength
 	        || function (s) { return String(s).length; }
 	    ;
-	    
+
 	    var dotsizes = reduce(rows_, function (acc, row) {
 	        forEach(row, function (c, ix) {
 	            var n = dotindex(c);
@@ -145958,7 +145958,7 @@ module.exports =
 	        });
 	        return acc;
 	    }, []);
-	    
+
 	    var rows = map(rows_, function (row) {
 	        return map(row, function (c_, ix) {
 	            var c = String(c_);
@@ -145972,7 +145972,7 @@ module.exports =
 	            else return c;
 	        });
 	    });
-	    
+
 	    var sizes = reduce(rows, function (acc, row) {
 	        forEach(row, function (c, ix) {
 	            var n = stringLength(c);
@@ -145980,7 +145980,7 @@ module.exports =
 	        });
 	        return acc;
 	    }, []);
-	    
+
 	    return map(rows, function (row) {
 	        return map(row, function (c, ix) {
 	            var n = (sizes[ix] - stringLength(c)) || 0;
@@ -145993,7 +145993,7 @@ module.exports =
 	                    + c + Array(Math.floor(n / 2 + 1)).join(' ')
 	                ;
 	            }
-	            
+
 	            return c + s;
 	        }).join(hsep).replace(/\s+$/, '');
 	    }).join('\n');
@@ -155608,7 +155608,7 @@ module.exports =
 	  // })()
 
 	  if (options.config) {
-	    console.log('GOT CONFIG, RESOLVING PROMISE', options)
+	    // console.log('GOT CONFIG, RESOLVING PROMISE', options)
 	    return Promise.resolve({ config: options.config })
 	  }
 	  console.log('REJECTED CONFIG')
